@@ -48,7 +48,7 @@ const KEY_CTRL = 17;
 
 const KEY_ENTER = 13;
 
-let ENEMY_SHOOTING_PROB = 0.0005;
+let ENEMY_SHOOTING_PROB = 0;
 let POWERUP_CHANCE =      0.0012;
 
 PIXI.loader
@@ -88,7 +88,7 @@ function processKey(key){
 function update(){
     
     if(ticker.FPS < 58){
-        console.warn("Low fps: " + ticker.FPS);
+         
     }
 
     if(playerShootingTimeout > 0){
@@ -132,7 +132,7 @@ function restartGame(){
 function startNewGame(){
     app.stage = new PIXI.Stage(0xFF);
 
-    ENEMY_SHOOTING_PROB = 0.0005;
+    ENEMY_SHOOTING_PROB = 0.0605;
 
     app.stage.addChild(new PIXI.Sprite(sprites.background.textures[0]));
 
@@ -489,7 +489,7 @@ class SpriteAnimation {
         this.currentTexture = 0;
         this.currentFrames = 0;
         if (this.textures == sprites.shield.textures){
-            console.warn(scale);
+             
         }
         this.sprite.width *= scale;
         this.sprite.height *= scale;
@@ -686,7 +686,7 @@ class Entity{
             let bullet = new Bullet(this.x + bodyOffset - bulletOffset,this.y,1,this.controllable,this.SADataBullet,this.SADataExplosion,speed);
             bulletEntities.push(bullet);
         }else{
-            console.error("Entity with no bullet defined tried to shoot!");
+             
         }
     }
 }

@@ -48,7 +48,7 @@ const KEY_CTRL = 17;
 
 const KEY_ENTER = 13;
 
-let ENEMY_SHOOTING_PROB = 0;
+let ENEMY_SHOOTING_PROB;
 let POWERUP_CHANCE =      0.0012;
 
 PIXI.loader
@@ -132,7 +132,7 @@ function restartGame(){
 function startNewGame(){
     app.stage = new PIXI.Stage(0xFF);
 
-    ENEMY_SHOOTING_PROB = 0.0005;
+    ENEMY_SHOOTING_PROB = 0.00005;
 
     app.stage.addChild(new PIXI.Sprite(sprites.background.textures[0]));
 

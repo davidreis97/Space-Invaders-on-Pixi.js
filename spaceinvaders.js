@@ -48,7 +48,7 @@ const KEY_CTRL = 17;
 
 const KEY_ENTER = 13;
 
-let ENEMY_SHOOTING_PROB = 0.00005;
+let ENEMY_SHOOTING_PROB = 0;
 let POWERUP_CHANCE =      0.0012;
 
 PIXI.loader
